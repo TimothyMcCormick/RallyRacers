@@ -1,9 +1,11 @@
+import { Racer } from "./Models/Racer.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
-  /** @type {import('./Models/Value').Value[]} */
-  values = []
+  
+  
+  racers = [new Racer('Johnny', '🐼', 21), new Racer('Elliot', '🦥', 15)]
 }
 
 export const ProxyState = new Proxy(new AppState(), {

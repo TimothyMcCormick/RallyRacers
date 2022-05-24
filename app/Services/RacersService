@@ -1,0 +1,15 @@
+import { ProxyState } from "../AppState.js"
+
+
+
+
+class RacersService{
+
+  racerScore(name){
+    let racer = ProxyState.racers.find(r => r.name == name)
+    console.log('connected racer service');
+    
+  }
+}
+
+export const racersService = new RacersService()
